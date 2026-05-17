@@ -40,6 +40,37 @@ dist/
 # =========================
 *.log
 npm-debug.log*
+logs/**
+!logs/**/.gitkeep
+
+# =========================
+# Backups
+# =========================
+backups/**
+!backups/**/.gitkeep
+
+# =========================
+# Storage / Uploads
+# =========================
+storage/**
+!storage/**/.gitkeep
+
+# =========================
+# SSL Certificates
+# =========================
+nginx/ssl/*.pem
+nginx/ssl/*.key
+nginx/ssl/*.crt
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Production secrets
+# =========================
+.env.production
 
 # =========================
 # Gemini / AI
