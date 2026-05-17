@@ -1,0 +1,62 @@
+# ============================================
+# Docker Ignore — Reduce build context size
+# ============================================
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+docs/
+DESIGN.md
+LICENSE
+
+# Environment files (loaded via env_file)
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (npm ci inside Docker)
+frontend/node_modules/
+frontend/dist/
+
+# Go binaries
+backend/*.exe
+backend/tmp/
+backend/vendor/
+
+# Logs & backups
+logs/
+backups/
+
+# Docker
+docker-compose*.yml
+.dockerignore
+
+# CI/CD
+.github/
+
+# Storage
+storage/
+
+# Nginx (mounted separately)
+nginx/ssl/
+
+# Scripts & Docs (not needed in build)
+scripts/
+docs/
+Makefile
+
+# AI
+.gemini/
