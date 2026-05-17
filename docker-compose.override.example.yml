@@ -1,0 +1,26 @@
+# ============================================
+# Docker Compose Override — Development Only
+# Copy to docker-compose.override.yml for local dev
+# ============================================
+# This exposes internal ports for debugging.
+# NEVER use this in production!
+# ============================================
+
+services:
+  # Expose PostgreSQL for local DB tools
+  postgres:
+    ports:
+      - "5432:5432"
+
+  # Expose Redis for local debugging
+  redis:
+    ports:
+      - "6379:6379"
+
+  # Expose backend directly (bypass nginx)
+  backend:
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_ENV=development
+      - GIN_MODE=debug
